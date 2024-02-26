@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.WebApi", "AFI.WebApi\AF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.BusinessLogic", "AFI.BusinessLogic\AFI.BusinessLogic.csproj", "{38D9E6BD-7854-4266-ACF8-7C16FD444E9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.DataAccess", "AFI.DataAccess\AFI.DataAccess.csproj", "{D26A3C20-4BDC-4064-B742-08A699409594}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{38D9E6BD-7854-4266-ACF8-7C16FD444E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38D9E6BD-7854-4266-ACF8-7C16FD444E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38D9E6BD-7854-4266-ACF8-7C16FD444E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D26A3C20-4BDC-4064-B742-08A699409594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D26A3C20-4BDC-4064-B742-08A699409594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D26A3C20-4BDC-4064-B742-08A699409594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D26A3C20-4BDC-4064-B742-08A699409594}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

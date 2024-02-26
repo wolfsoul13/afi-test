@@ -1,3 +1,7 @@
+using AFI.DataAccess;
+using AFI.DataAccess.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +11,22 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var connStr = builder.Configuration.GetConnectionString("AfiDb");
+
+builder.Services.AddDbContextPool<PolicyHolderContext>(options => options.UseSqlServer(connStr));
+
+
+builder.Services.AddScoped<DbContext, PolicyHolderContext>();
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateAsyncScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<PolicyHolderContext>();
+    dbContext.Database.EnsureCreated();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
