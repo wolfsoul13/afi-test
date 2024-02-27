@@ -25,8 +25,9 @@ namespace AFI.WebApi.Controllers
         {
             var result = await policyHolderHandler.NewPolicyHolder(policyHolder);
 
+            if (!result.ValidationResult.IsValid) return TypedResults.BadRequest(result.ValidationResult);
 
-            return TypedResults.Created($"/policyHolder/{result}", policyHolder);
+            return TypedResults.Created($"/policyHolder/{result.Result}", policyHolder);
 
         }
     }

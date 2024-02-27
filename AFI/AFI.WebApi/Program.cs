@@ -1,9 +1,11 @@
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
+using AFI.BusinessLogic.Validators;
 using AFI.DataAccess;
 using AFI.DataAccess.Repositories;
 using AFI.Handlers.Services;
 using AFI.Models.Adapters;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -50,6 +52,7 @@ builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddScoped<IPolicyHolderHandler, PolicyHolderHandler>();
 builder.Services.AddScoped<IPolicyHolderAdapter, PolicyHolderAdapter>();
 
+builder.Services.AddValidatorsFromAssemblyContaining<PolicyHolderValidator>();
 
 var app = builder.Build();
 
