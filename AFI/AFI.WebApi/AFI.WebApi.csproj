@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AFI.BusinessLogic\AFI.BusinessLogic.csproj" />
     <ProjectReference Include="..\AFI.DataAccess\AFI.DataAccess.csproj" />
+    <ProjectReference Include="..\AFI.Handlers\AFI.Handlers.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 using AFI.DataAccess;
 using AFI.DataAccess.Repositories;
+using AFI.Handlers.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,7 @@ builder.Services.AddDbContextPool<PolicyHolderContext>(options => options.UseSql
 
 builder.Services.AddScoped<DbContext, PolicyHolderContext>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+builder.Services.AddScoped<IPolicyHolderHandler, PolicyHolderHandler>();
 
 
 var app = builder.Build();

@@ -1,0 +1,5 @@
+bin
+obj
+/AFI/AFI.WebApi/appsettings.Development.json
+*.suo
+.vs
