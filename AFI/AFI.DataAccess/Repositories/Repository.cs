@@ -1,6 +1,8 @@
-﻿using AFI.BusinessLogic.Entities;
+﻿using System.Runtime.CompilerServices;
+using AFI.BusinessLogic.Entities;
 using Microsoft.EntityFrameworkCore;
 
+[assembly: InternalsVisibleTo("AFI.DataAccessTests")]
 namespace AFI.DataAccess.Repositories
 {
     public abstract class Repository<TEntity> : IRepository<TEntity>, IDisposable
