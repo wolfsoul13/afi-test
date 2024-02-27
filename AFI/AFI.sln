@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.ModelsTests", "AFI.Mode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.BusinessLogicTests", "AFI.BusinessLogicTests\AFI.BusinessLogicTests.csproj", "{3690322F-6E53-4332-B426-B9819F440068}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.HandlerTests", "AFI.HandlerTests\AFI.HandlerTests.csproj", "{980A0443-2524-4598-8B9D-1A50D115CF88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{3690322F-6E53-4332-B426-B9819F440068}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3690322F-6E53-4332-B426-B9819F440068}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3690322F-6E53-4332-B426-B9819F440068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980A0443-2524-4598-8B9D-1A50D115CF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980A0443-2524-4598-8B9D-1A50D115CF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980A0443-2524-4598-8B9D-1A50D115CF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980A0443-2524-4598-8B9D-1A50D115CF88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{F5D03B23-AFC1-4663-A317-FC292E16D4EB} = {CD61AD8C-6BAB-47C6-9776-C87825FDDC1B}
 		{A48F0E56-A4D9-43A7-8E38-7376E6E80B39} = {CD61AD8C-6BAB-47C6-9776-C87825FDDC1B}
 		{3690322F-6E53-4332-B426-B9819F440068} = {CD61AD8C-6BAB-47C6-9776-C87825FDDC1B}
+		{980A0443-2524-4598-8B9D-1A50D115CF88} = {CD61AD8C-6BAB-47C6-9776-C87825FDDC1B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1D52087-1927-4A0D-BB39-BA9FE19D96E0}
