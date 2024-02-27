@@ -1,44 +1,29 @@
 ﻿
 using AFI.BusinessLogic.Entities;
 using AFI.DataAccess.Repositories;
+using AFI.Models.Adapters;
+using AFI.Models.Client;
 
 namespace AFI.Handlers.Services
 {
     public class PolicyHolderHandler : IPolicyHolderHandler
     {
         private readonly IPersonRepository personRepository;
+        private readonly IPolicyHolderAdapter policyHolderAdapter;
 
-        public PolicyHolderHandler(IPersonRepository personRepository)
+        public PolicyHolderHandler(IPersonRepository personRepository, IPolicyHolderAdapter policyHolderAdapter)
         {
             this.personRepository = personRepository ?? throw new ArgumentNullException(nameof(personRepository));
+            this.policyHolderAdapter = policyHolderAdapter ?? throw new ArgumentNullException(nameof(policyHolderAdapter));
         }
 
-        public async Task<int> NewPolicyHolder()
+        public async Task<int> NewPolicyHolder(PolicyHolder policyHolder)
         {
-            var person = new Person
-            {
-                FirstName = "Ikkuma",
-                LastName = "Uqiok",
-                DateOfBirth = new
-                    DateTime(2006, 2, 26)
-            };
+            if (policyHolder == null) throw new ArgumentNullException(nameof(policyHolder));
 
-            var contact = new Contact
-            {
-                ContactType = ContactType.Email,
-                Value = "soe@e."
-            };
+            var entity = policyHolderAdapter.ToEntity(policyHolder);
 
-            person.Contacts.Add(contact);
-
-            var policy = new Policy
-            {
-                PolicyNumber = "XC-364363"
-            };
-
-            person.Policies.Add(policy);
-
-            var result = await personRepository.Insert(person);
+            var result = await personRepository.Insert(entity);
             await personRepository.Save();
 
             return result.Id;

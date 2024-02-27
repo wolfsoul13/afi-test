@@ -1,7 +1,9 @@
-﻿namespace AFI.Handlers.Services
+﻿using AFI.Models.Client;
+
+namespace AFI.Handlers.Services
 {
     public interface IPolicyHolderHandler
     {
-        Task<int> NewPolicyHolder();
+        Task<int> NewPolicyHolder(PolicyHolder policyHolder);
     }
 }

@@ -1,6 +1,7 @@
 using AFI.BusinessLogic.Entities;
 using AFI.DataAccess.Repositories;
 using AFI.Handlers.Services;
+using AFI.Models.Client;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AFI.WebApi.Controllers
@@ -18,10 +19,15 @@ namespace AFI.WebApi.Controllers
             this.policyHolderHandler = policyHolderHandler ?? throw new ArgumentNullException(nameof(policyHolderHandler));
         }
 
-        [HttpGet(Name = "NewPolicyHolder")]
-        public async Task<int> New()
+   
+        [HttpPost(Name = "NewPolicyHolder")]
+        public async Task<IResult> New([FromBody] PolicyHolder policyHolder)
         {
-            return await policyHolderHandler.NewPolicyHolder();
+            var result = await policyHolderHandler.NewPolicyHolder(policyHolder);
+
+
+            return TypedResults.Created($"/policyHolder/{result}", policyHolder);
+
         }
     }
 }
