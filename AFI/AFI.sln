@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Handlers", "AFI.Handler
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.Models", "AFI.Models\AFI.Models.csproj", "{D1617FBC-F3AA-4F5A-9313-29D9D1820193}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFI.ModelsTests", "AFI.ModelsTests\AFI.ModelsTests.csproj", "{A48F0E56-A4D9-43A7-8E38-7376E6E80B39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,12 +49,17 @@ Global
 		{D1617FBC-F3AA-4F5A-9313-29D9D1820193}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1617FBC-F3AA-4F5A-9313-29D9D1820193}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1617FBC-F3AA-4F5A-9313-29D9D1820193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48F0E56-A4D9-43A7-8E38-7376E6E80B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48F0E56-A4D9-43A7-8E38-7376E6E80B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48F0E56-A4D9-43A7-8E38-7376E6E80B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48F0E56-A4D9-43A7-8E38-7376E6E80B39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F5D03B23-AFC1-4663-A317-FC292E16D4EB} = {CD61AD8C-6BAB-47C6-9776-C87825FDDC1B}
+		{A48F0E56-A4D9-43A7-8E38-7376E6E80B39} = {CD61AD8C-6BAB-47C6-9776-C87825FDDC1B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1D52087-1927-4A0D-BB39-BA9FE19D96E0}
